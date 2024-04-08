@@ -1,7 +1,7 @@
-<?php include('inc/header.php');  ?>
+<?php include 'inc/header.php';?>
 
-<?php include('inc/nav.php');  ?>
- 
+<?php include "inc/nav.php";?>
+
  
 
 <div class="container text-white">
@@ -230,7 +230,5 @@
 
 
 
-
-<?php include('inc/footer.php');  ?>
-
-
+ 
+<?php include "inc/footer.php";?>

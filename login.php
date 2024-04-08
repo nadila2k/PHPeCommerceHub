@@ -1,6 +1,7 @@
-<?php include('inc/header.php');  ?>
+<?php include 'inc/header.php';?>
 
-<?php include('inc/nav.php');  ?>
+<?php include "inc/nav.php";?>
+
  
 <div class="container text-white">
     <div class="row">
@@ -9,7 +10,7 @@
             <h2>Shop - Account</h2>
            
         </div>
-      </div  >
+      </div>
 
 
         <div class="col-md-12">
@@ -101,10 +102,9 @@
 </div>
 
 
+<?php include "inc/footer.php";?>
 
 
 
-<?php include('inc/footer.php');  ?>
 
-
-
+ 

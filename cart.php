@@ -1,7 +1,8 @@
-<?php include('inc/header.php');  ?>
+<?php include 'inc/header.php';?>
 
-<?php include('inc/nav.php');  ?>
- 
+<?php include "inc/nav.php";?>
+
+
  
 <div class="container">
     <h2 class='text-center text-white'>Cart</h2>
@@ -49,7 +50,5 @@
 
 
 
-
-<?php include('inc/footer.php');  ?>
-
-
+ 
+<?php include "inc/footer.php";?>

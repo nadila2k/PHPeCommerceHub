@@ -1,8 +1,7 @@
-<?php include('inc/header.php');  ?>
+<?php include 'inc/header.php';?>
 
-<?php include('inc/nav.php');  ?>
- 
- 
+<?php include "inc/nav.php";?>
+
 
 
 <div class="content mt-5">
@@ -78,8 +77,4 @@
 
 
 
-
-
-        <?php include('inc/footer.php');  ?>
-
-
+        <?php include "inc/footer.php";?>
