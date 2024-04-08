@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-  	
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</head>
-<body class="bg-info">
-
-
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">UI-MONK</a>
+  <a class="navbar-brand" href="index.php">UI-MONK</a>
 
   <!-- Links -->
   <ul class="navbar-nav ml-auto">
@@ -26,8 +12,8 @@
             Categories
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">view Categories </a>
-          <a class="dropdown-item" href="#">Add Categories</a> 
+          <a class="dropdown-item" href="category.php">view Categories </a>
+          <a class="dropdown-item" href="addCategory.php">Add Categories</a> 
         </div>
       </li>
 
@@ -37,8 +23,8 @@
             Products
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">view Products </a>
-          <a class="dropdown-item" href="#">Add Products</a> 
+          <a class="dropdown-item" href="products.php">view Products </a>
+          <a class="dropdown-item" href="addProducts.php">Add Products</a> 
         </div>
       </li>
 
@@ -47,8 +33,8 @@
             Orders
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">view Orders </a>
-          <a class="dropdown-item" href="#">Add Orders</a> 
+          <a class="dropdown-item" href="orders.php">view Orders </a>
+          <a class="dropdown-item" href="addorder.php">Add Orders</a> 
         </div>
       </li>
 
@@ -58,11 +44,15 @@
             My Account
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Edit Profile </a>
-          <a class="dropdown-item" href="#">Logout</a> 
+          <a class="dropdown-item" href="editProfile.php">Edit Profile </a>
+          <a class="dropdown-item" href="logout.php">Logout</a> 
         </div>
       </li>
 
+      <li class="nav-item mt-2">
+        <a href="logout.php
+        " class="nav-link">Logout</a>
+      </li>
 
       
       
@@ -123,11 +113,3 @@
     </div> 
   </ul>
 </nav>
-
- 
-
-
-
- 
-</body>
-</html>
