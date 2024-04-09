@@ -1,6 +1,5 @@
 <?php
 
-use function PHPSTORM_META\map;
 
 session_start();
 include "../config/db.php";
@@ -22,6 +21,8 @@ if (isset($_GET['id'])) {
     $rows = mysqli_fetch_assoc($res);
 }
 ?>
+<!-- update query -->
+
 <div class="container">
     <div class="card">
         <div class="card-header">
@@ -31,8 +32,9 @@ if (isset($_GET['id'])) {
             <section id="content ">
                 <div class="content-blog mt-5">
                     <div class="container">
-                        <form action="post" enctype="multipart/form-data">
+                        <form action="codeUpdateProducts.php" enctype="multipart/form-data" method="post" >
 
+                        <input type="hidden" name="id" value="<?php echo $rows['product_id']?>">
                             <div class="form-group">
                                 <label for="Productname"> Product Name</label>
                                 <input type="text" class="form-control" name="productname" value="<?php echo $rows['product_name'] ?>">
@@ -51,9 +53,9 @@ if (isset($_GET['id'])) {
                                     while ($row2 = mysqli_fetch_assoc($res2)) {
                                     ?>
                                         <option value="<?php echo $row2['cat_id'] ?>" <?php
-                                       if ( $row2['cat_id'] == $rows['cat_id']) {
-                                      echo 'selected';
-                                        } ?>>
+                                                                                        if ($row2['cat_id'] == $rows['cat_id']) {
+                                                                                            echo 'selected';
+                                                                                        } ?>>
                                             <?php echo $row2['cat_name'] ?>
                                         </option>
                                     <?php
@@ -67,12 +69,31 @@ if (isset($_GET['id'])) {
                                 <label for="productprice">product Price</label>
                                 <input type="text" name="productprice" id="productprice" value="<?php echo $rows['price'] ?>">
                             </div>
-                            <div class="form-group">
-                                <label for="productimage">Product image</label>
-                                <input type="file" name="productimage" id="productimage">
-                                <p class="help-block">Only jbg/png are allowed.</p>
+                            <div style="border: 2px solid black; padding: 10px; width: 400px;">
+                                <?php
+                                if (isset($rows['thumb'])) {
+                                ?>
+                                    <img src="<?php echo $rows['thumb'] ?>" alt="" height="150" width="150">
+                                    <br>
+                                    <br>
+                                    <a href="dltProductImage.php?id=<?php echo $rows['product_id']; ?>&image_name=<?php echo $rows['thumb']; ?>" class="btn btn-primary">Delete Image</a>
+
+                                <?php
+                                } else {
+                                ?>
+                                    <div class="form-group">
+                                        <label for="productimage">Product image</label>
+                                        <input type="file" name="productimage" id="productimage">
+                                        <p class="help-block">Only jbg/png are allowed.</p>
+                                    </div>
+                                <?php
+                                }
+
+                                ?>
                             </div>
-                            <button class="btn btn-default">Submit</button>
+                            <br>
+
+                            <button type="submit" class="btn btn-default" name="submit">Submit</button>
                         </form>
                     </div>
                 </div>

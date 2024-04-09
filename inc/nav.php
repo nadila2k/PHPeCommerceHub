@@ -1,3 +1,5 @@
+<?php include "config/db.php"?>
+
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
   <a class="navbar-brand" href="#">UI-MONK</a>
@@ -5,11 +7,34 @@
   <!-- Links -->
   <ul class="navbar-nav ml-auto">
     <li class="nav-item mt-2">
-      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" href="index.php">Home</a>
     </li>
     <li class="nav-item mt-2">
       <a class="nav-link" href="#">Shop</a>
     </li>
+	<li class="nav-item dropdown mt-2">
+		<a href="" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+			Category
+		</a>
+		<div class="dropdown-menu">
+			<?php 
+			 $sql = "SELECT * FROM Category";
+			 $result = mysqli_query($conn, $sql);
+			 if (mysqli_num_rows($result) > 0) {
+				// output data of each row
+				while ($row = mysqli_fetch_assoc($result)) {
+
+					?>
+					<a href="index.php?id=<?php echo $row["cat_id"] ?>" class="dropdown-item"><?php echo $row["cat_name"] ?></a>
+					<?php
+				}
+			}
+
+				
+			?>
+			
+		</div>
+	</li>
     <li class="nav-item mt-2">
       <a class="nav-link" href="#">My Account</a>
     </li>
