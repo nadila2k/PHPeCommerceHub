@@ -12,3 +12,5 @@
 </head>
 <body class="bg-info">
 <?php session_start();?>
+<?php include "config/db.php" ;
+?>
