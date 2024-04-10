@@ -28,7 +28,12 @@ if (isset($_GET['id'])) {
                     Quantity:
                 </div>
                 <div class="col-md-2">
-                    <input type="text" class='form-control'>
+                    <form action="addtoCart.php">
+                        <input type="hidden" name="id" value="<?php echo $rows['product_id']; ?>">
+                        <input type="number" class='form-control' name="quantity">
+
+
+
                 </div>
 
             </div>
@@ -46,17 +51,19 @@ if (isset($_GET['id'])) {
             </div>
             <div class="row mt-4">
                 <div class="col-md-4">
-                    <button class='btn'>Add to Cart</button>
+                <button type="submit" class="btn btn-default btn-xs pull-right" >
+                    <i class="fa fa-cart-arrow-down"></i> Add To Cart
+                </button>
                 </div>
             </div>
-
+            </form>
 
         </div>
-  
+
     </div>
     <div class="tab mt-5">
         <button id='defaultOpen' class="tablinks" onclick="openCity(event,'London')">Details</button>
-        <button  class="tablinks" onclick="openCity(event,'Paris')">Review</button>
+        <button class="tablinks" onclick="openCity(event,'Paris')">Review</button>
     </div>
     <div id="London" class="tabcontent bg-white">
         <h3><?php echo $rows['description'] ?></h3>

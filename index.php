@@ -29,9 +29,9 @@
                 <div class="price">RS <?php echo $rows['price']; ?>.00</div>
 
                 <hr>
-                <button class="btn btn-default btn-xs pull-right" type="button">
+                <a href="addtoCart.php?id=<?php echo $rows['product_id']; ?>"  class="btn btn-default btn-xs pull-right" >
                     <i class="fa fa-cart-arrow-down"></i> Add To Cart
-                </button>
+                </a>
                 <a href="single.php?id=<?php echo $rows['product_id']; ?>"  class="btn btn-default btn-xs pull-left" >
                     <i class="fa fa-eye"></i> Details
                 </a>
