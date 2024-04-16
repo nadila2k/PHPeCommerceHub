@@ -54,7 +54,7 @@ $cart = $_SESSION['cart'];
 
     <div class="text-right">
         <button class="btn mr-3">Update Cart</button>
-        <button class="btn">Checkout</button>
+        <a href="checkout.php" class="btn btn-primary">Checkout</a>
     </div>
     <div class="card">
         <div class="card-header">Total</div>

@@ -40,7 +40,7 @@
 			</button>
 			<div class="dropdown-menu">
 				<a class="dropdown-item" href="logout.php">Logout</a>
-				
+				<a class="dropdown-item" href="myaccount.php">My account</a>
 			</div>
 		</div>
 		<li class="nav-item mt-2">
@@ -84,7 +84,7 @@
 							</div>
 
 						<?php
-							$total += $value['quantity'] *  $row['price'];
+							$total = $total+( $value['quantity'] *  $row['price']) ;
 						}
 						?>
 
@@ -102,8 +102,9 @@
 
 						<div class="row">
 							<div class="col-lg-12 col-sm-12 col-12 text-center checkout">
-								<button class="btn btn-primary btn-block">Checkout</button>
+								
 								<a href="cart.php" class="btn btn-primary btn-block">Cart</a>
+								<a href="checkout.php" class="btn btn-primary btn-block">Ceckout</a>
 							</div>
 						</div>
 					</div>
